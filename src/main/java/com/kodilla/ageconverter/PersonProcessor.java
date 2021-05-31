@@ -10,7 +10,7 @@ import static java.util.Calendar.YEAR;
 public class PersonProcessor implements ItemProcessor<Person, Person> {
 
     @Override
-    public Person process(Person item) throws Exception {
+    public Person process(Person item) {
         Person person = new Person(item.getFirstName(), item.getLastName());
         person.setAge(countAge(item.getBirthYear()));
         return person;
